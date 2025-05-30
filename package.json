@@ -1,0 +1,14 @@
+{
+  "name": "story-teller-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:iliran11/story-teller-backend.git",
+  "author": "Liran Cohen <iliran11@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
