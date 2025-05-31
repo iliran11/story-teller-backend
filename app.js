@@ -3,7 +3,9 @@ const app = express();
 const subtopicsRouter = require("./src/modules/sub-topics/sub-topics.route");
 const topicsRouter = require("./src/modules/topics/topics.route");
 const explainerRouter = require("./src/modules/explainer/explainer.route");
+const cors = require("cors");
 
+app.use(cors());
 app.use("/sub-topics", subtopicsRouter);
 app.use("/topics", topicsRouter);
 app.use("/explainer", explainerRouter);
