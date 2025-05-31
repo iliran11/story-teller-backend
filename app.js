@@ -6,6 +6,9 @@ const explainerRouter = require("./src/modules/explainer/explainer.route");
 const cors = require("cors");
 
 app.use(cors());
+app.use("/", (req, res) => {
+  res.send("Hello World");
+});
 app.use("/sub-topics", subtopicsRouter);
 app.use("/topics", topicsRouter);
 app.use("/explainer", explainerRouter);
