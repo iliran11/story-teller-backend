@@ -1,3 +1,6 @@
+const Openai = require("../../lib/openai/openai");
+const _ = require("lodash");
+
 const getTopics = async () => {
   const topics = [
     "Ancient Civilizations",
@@ -9,7 +12,7 @@ const getTopics = async () => {
     "Philosophical Schools",
     "Digital Revolution",
     "Global Trade",
-    "Ethical Dilemmas"
+    "Ethical Dilemmas",
   ];
   return topics;
 };

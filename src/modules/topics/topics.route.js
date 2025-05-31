@@ -1,10 +1,14 @@
 const express = require("express");
 const router = express.Router();
-const { getTopics } = require("./topics.service");
+const Service = require("./topics.service");
 
-router.get("/", async (req, res) => {
-  const topics = await getTopics();
-  res.send({ data: topics });
+router.get("/", async (req, res, next) => {
+  try {
+    const topics = await Service.getTopics();
+    res.send({ data: topics });
+  } catch (error) {
+    next(error);
+  }
 });
 
 module.exports = router;

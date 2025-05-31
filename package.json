@@ -8,6 +8,7 @@
   "dependencies": {
     "@dotenvx/dotenvx": "^1.44.1",
     "express": "^5.1.0",
+    "lodash": "^4.17.21",
     "openai": "^5.0.1"
   },
   "scripts": {
