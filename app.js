@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
-const topicsRouter = require("./src/modules/topics/topics.route");
+const subtopicsRouter = require("./src/modules/sub-topics/sub-topics.route");
 
-app.use("/topics", topicsRouter);
+app.use("/sub-topics", subtopicsRouter);
 
-app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
+app.listen(4000, () => {
+  console.log("Server running on http://localhost:4000");
 });

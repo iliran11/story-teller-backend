@@ -6,9 +6,15 @@
   "author": "Liran Cohen <iliran11@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^5.1.0"
+    "@dotenvx/dotenvx": "^1.44.1",
+    "express": "^5.1.0",
+    "openai": "^5.0.1"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "dotenvx run -- nodemon --inspect=4001 app.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
