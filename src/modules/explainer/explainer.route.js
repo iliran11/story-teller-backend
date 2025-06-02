@@ -4,6 +4,7 @@ const Service = require("./explainer.service");
 
 router.get("/topic", async (req, res, next) => {
     try {
+      const acceptLanguage = req.headers['accept-language'] || 'en';
       const { topic } = req.query;
       if (!topic) {
         return res
