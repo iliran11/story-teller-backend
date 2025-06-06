@@ -8,6 +8,7 @@
   "dependencies": {
     "@dotenvx/dotenvx": "^1.44.1",
     "cors": "^2.8.5",
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
     "lodash": "^4.17.21",
     "morgan": "^1.10.0",
