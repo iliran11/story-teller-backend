@@ -29,8 +29,7 @@
                     <p class="text-md">Choose a topic you are curious about to begin a story</p>
                     <div class="cards-container">
                         <% topics.forEach(function(topic) { %>
-                            <%- include('../partials/card', { icon: topic.icon, title: topic.title, description:
-                                topic.description }) %>
+                            <%- include('../partials/card', { icon: topic.icon, title: topic.title, descriptionUrl: `/${topic.id}` }) %>
                                 <% }); %>
                     </div>
                 </div>

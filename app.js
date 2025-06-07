@@ -8,7 +8,7 @@ const cors = require("cors");
 
 app.use(morgan('dev'))
 app.set('view engine', 'ejs');
-app.set('views', './src/frontend/views');
+app.set('views', './src/frontend');
 app.use(cors());
 
 app.use("/sub-topics", subtopicsRouter);

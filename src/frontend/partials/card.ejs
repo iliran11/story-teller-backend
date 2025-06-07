@@ -2,18 +2,10 @@
     <div class="card-title text-lg font-bold font-sans text-text">
         <%= title %>
     </div>
-    <% if (description==='skeleton' ) { %>
-        <div class="skeleton-container" 
-             hx-get="/explainer/topic/?topic=<%= title %>"
-             hx-trigger="load">
-            <%- include('../partials/skeleton') %>
-        </div>
-        <% } else { %>
-            <div class="card-description text-sm font-sans text-text-muted leading-snug">
-                <%= description %>
-            </div>
-            <% } %>
-                <span class="emoji-icon text-xlg">
-                    <%= icon %>
-                </span>
+    <div class="skeleton-container" hx-get="<%= descriptionUrl %>" hx-trigger="load" hx-swap="outerHTML">
+        <%- include('../partials/skeleton') %>
+    </div>
+    <span class="emoji-icon text-xlg">
+        <%= icon %>
+    </span>
 </div>

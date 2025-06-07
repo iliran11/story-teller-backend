@@ -1,10 +1,12 @@
 // lib/openai.js
-import OpenAI from "openai";
+const OpenAI = require("openai");
+const { supabase } = require("../../lib/supabase/supabase");
+
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-export async function getSubTopics(topic) {
+async function generateSubTopics(topic) {
   const res = await openai.chat.completions.create({
     model: "gpt-4.1-nano",
     messages: [
@@ -56,3 +58,17 @@ export async function getSubTopics(topic) {
   }
   throw new Error("No tool calls found");
 }
+
+async function getSubTopics(topicId) {
+  const { data, error } = await supabase
+    .from("topic_descriptions")
+    .select("*")
+    .eq("topic_id", topicId)
+    .limit(1);
+  if (error) {
+    throw error;
+  }
+  return data;
+}
+
+module.exports = { generateSubTopics, getSubTopics };
