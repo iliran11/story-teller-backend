@@ -10,9 +10,10 @@ app.use(morgan('dev'))
 app.set('view engine', 'ejs');
 app.set('views', './src/frontend/views');
 app.use(cors());
+
 app.use("/sub-topics", subtopicsRouter);
-app.use("/", topicsRouter);
 app.use("/explainer", explainerRouter);
+app.use("/", topicsRouter);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
