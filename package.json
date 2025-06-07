@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "@dotenvx/dotenvx": "^1.44.1",
+    "@supabase/supabase-js": "^2.50.0",
     "cors": "^2.8.5",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
@@ -19,6 +20,7 @@
     "dev": "dotenvx run -- nodemon --inspect=4001 app.js"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "supabase": "^2.24.3"
   }
 }
