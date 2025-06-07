@@ -3,14 +3,14 @@ const app = express();
 const morgan = require('morgan')
 const subtopicsRouter = require("./src/modules/sub-topics/sub-topics.route");
 const topicsRouter = require("./src/modules/topics/topics.route");
-const explainerRouter = require("./src/modules/explainer/explainer.route");
+const apiRouter = require("./src/modules/api/api.route");
 const cors = require("cors");
 
 app.use(morgan('dev'))
 app.set('view engine', 'ejs');
 app.set('views', './src/frontend');
 app.use(cors());
-
+app.use("/api", apiRouter);
 app.use("/sub-topics", subtopicsRouter);
 app.use("/", topicsRouter);
 

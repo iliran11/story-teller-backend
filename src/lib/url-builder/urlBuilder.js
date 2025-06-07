@@ -3,7 +3,7 @@ const BASE_URL = process.env.BACKEND_URL;
 const backend = {
   topics: {
     description: (topicId) =>
-      new URL(`/${topicId}`, BASE_URL).toString(),
+      new URL(`/api/topic/description/${topicId}`, BASE_URL).toString(),
   },
 };
 
