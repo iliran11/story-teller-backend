@@ -12,7 +12,6 @@ app.set('views', './src/frontend');
 app.use(cors());
 
 app.use("/sub-topics", subtopicsRouter);
-app.use("/explainer", explainerRouter);
 app.use("/", topicsRouter);
 
 app.use((err, req, res, next) => {
