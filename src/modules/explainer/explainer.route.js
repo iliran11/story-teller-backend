@@ -12,7 +12,7 @@ router.get("/topic", async (req, res, next) => {
           .json({ error: "Topic query parameter is required" });
       }
       const description = await Service.getTopicDescription(topic);
-      res.send({ data: description });
+      res.render('../../frontend/partials/text', { text: description });
     } catch (error) {
       next(error);
     }
