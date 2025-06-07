@@ -20,6 +20,9 @@
   }
 
   /* 20px */
+  .text-xlg {
+    font-size: 1.5rem;
+  }
 
   /* Desktop overrides using min-width media query */
   @media (min-width: 768px) {
@@ -43,44 +46,45 @@
     }
 
     /* 24px */
+    .text-xlg {
+      font-size: 2rem;
+    }
+
+    /* 32px */
   }
 
-
-
   :root {
-    /* Primary brand color */
-    --color-primary: #4f46e5;
-    /* Indigo-600 */
-    --color-primary-light: #6366f1;
-    /* Indigo-500 */
-    --color-primary-dark: #4338ca;
-    /* Indigo-700 */
+    /* Primary brand color - deep purple header */
+    --color-primary: #3b3a61;
+    /* custom deep muted indigo */
+    --color-primary-light: #5c5b86;
+    --color-primary-dark: #2c2a4f;
 
-    /* Secondary color */
-    --color-secondary: #10b981;
-    /* Emerald-500 */
-    --color-secondary-light: #34d399;
-    --color-secondary-dark: #059669;
+    /* Secondary accent - warm golden notification */
+    --color-secondary: #f59e0b;
+    /* Amber-500 */
+    --color-secondary-light: #fbbf24;
+    --color-secondary-dark: #b45309;
 
-    /* Neutral backgrounds and surfaces */
-    --color-background: #f9fafb;
-    /* Gray-50 */
-    --color-surface: #ffffff;
-    /* White */
-    --color-surface-muted: #f3f4f6;
-    /* Gray-100 */
+    /* Backgrounds */
+    --color-background: #fff7dd;
+    /* warm creamy yellow */
+    --color-surface: #ede8ff;
+    /* soft lavender for cards */
+    --color-surface-muted: #e2dcfa;
+    /* muted lavender alt */
 
     /* Text colors */
-    --color-text: #111827;
-    /* Gray-900 */
-    --color-text-muted: #6b7280;
-    /* Gray-500 */
+    --color-text: #2f2f44;
+    /* deep grayish purple for contrast */
+    --color-text-muted: #6c648b;
+    /* for descriptions */
     --color-text-inverse: #ffffff;
 
     /* Accent and borders */
     --color-accent: #f59e0b;
-    /* Amber-500 */
-    --color-border: #e5e7eb;
-    /* Gray-200 */
+    /* reused secondary */
+    --color-border: #cfcde5;
+    /* light lavender-gray for soft borders */
   }
 </style>

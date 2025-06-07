@@ -11,12 +11,8 @@ app.set('view engine', 'ejs');
 app.set('views', './src/frontend/views');
 app.use(cors());
 app.use("/sub-topics", subtopicsRouter);
-app.use("/topics", topicsRouter);
+app.use("/", topicsRouter);
 app.use("/explainer", explainerRouter);
-
-app.get('/', (req, res) => {
-  res.render('index', {foo: 'FOO'});
-});
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

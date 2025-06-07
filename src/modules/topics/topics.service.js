@@ -3,17 +3,43 @@ const _ = require("lodash");
 
 const getTopics = async () => {
   const topics = [
-    "Ancient Civilizations",
-    "Scientific Discoveries",
-    "Artistic Movements",
-    "Technological Evolution",
-    "Natural Phenomena",
-    "Economic Systems",
-    "Philosophical Schools",
-    "Digital Revolution",
-    "Global Trade",
-    "Ethical Dilemmas",
+    {
+      icon: "⚖️",
+      title: "Philosophy",
+      description: "skeleton",
+    },
+    {
+      icon: "🌍",
+      title: "Travel",
+      description: "skeleton",
+    },
+    {
+      icon: "📜",
+      title: "History",
+      description: "skeleton",
+    },
+    {
+      icon: "🧙‍♂️",
+      title: "Fantasy Lore",
+      description: "skeleton",
+    },
+    {
+      icon: "🤖",
+      title: "Technology",
+      description: "skeleton",
+    },
+    {
+      icon: "🏛️",
+      title: "Civilizations",
+      description: "skeleton",
+    },
+    {
+      icon: "🌐",
+      title: "Geopolitics",
+      description: "skeleton",
+    },
   ];
+
   return topics;
 };
 

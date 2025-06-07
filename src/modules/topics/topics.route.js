@@ -5,7 +5,7 @@ const Service = require("./topics.service");
 router.get("/", async (req, res, next) => {
   try {
     const topics = await Service.getTopics();
-    res.send({ data: topics });
+    res.render("index", {  topics });
   } catch (error) {
     next(error);
   }

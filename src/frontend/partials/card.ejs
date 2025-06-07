@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-title text-lg font-bold font-sans text-text">
+        <%= title %>
+    </div>
+    <% if (description==='skeleton' ) { %>
+        <div class="skeleton-container">
+            <%- include('../partials/skeleton') %>
+        </div>
+        <% } else { %>
+            <div class="card-description text-sm font-sans text-text-muted leading-snug">
+                <%= description %>
+            </div>
+            <% } %>
+                <span class="emoji-icon text-xlg">
+                    <%= icon %>
+                </span>
+</div>

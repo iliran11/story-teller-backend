@@ -1,0 +1,42 @@
+<style>
+    .card {
+        background-color: var(--color-surface);
+        /* lavender */
+        border-radius: 1rem;
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+    }
+
+    .emoji-icon {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        filter: grayscale(1) brightness(0.6) sepia(1) hue-rotate(250deg) saturate(4);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        z-index: 10;
+        font-size: 2.5rem;
+    }
+
+    .emoji-icon:hover {
+        transform: scale(1.2);
+        filter: grayscale(0) brightness(1);
+    }
+
+    .skeleton-container {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .card-description {
+        margin-top: 1rem;
+    }
+</style>

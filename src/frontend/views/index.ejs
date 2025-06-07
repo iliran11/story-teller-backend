@@ -1,5 +1,38 @@
 <%- include('../partials/head') %>
 
     <body>
-        <%- include('../partials/header') %>
+        <%- include('../partials/card-css') %>
+            <style>
+                .container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--color-text);
+                    background-color: var(--color-background);
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
+                }
+
+                .cards-container {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 1.5rem;
+                    justify-content: center;
+                    margin-top: 2rem;
+                }
+            </style>
+            <%- include('../partials/header') %>
+                <div class="container">
+                    <h1 class="text-lg">Pick a world to explore</h1>
+                    <p class="text-md">Choose a topic you are curious about to begin a story</p>
+                    <div class="cards-container">
+                        <% topics.forEach(function(topic) { %>
+                            <%- include('../partials/card', { icon: topic.icon, title: topic.title, description:
+                                topic.description }) %>
+                                <% }); %>
+                    </div>
+                </div>
+
     </body>
