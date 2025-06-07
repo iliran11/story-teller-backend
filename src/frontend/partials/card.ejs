@@ -3,7 +3,9 @@
         <%= title %>
     </div>
     <% if (description==='skeleton' ) { %>
-        <div class="skeleton-container">
+        <div class="skeleton-container" 
+             hx-get="/explainer?topic=<%= title %>"
+             hx-trigger="click">
             <%- include('../partials/skeleton') %>
         </div>
         <% } else { %>
