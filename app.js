@@ -6,10 +6,11 @@ const topicsRouter = require("./src/modules/topics/topics.route");
 const apiRouter = require("./src/modules/api/api.route");
 const cors = require("cors");
 
-app.use(morgan('dev'))
 app.set('view engine', 'ejs');
 app.set('views', './src/frontend');
+app.use(morgan('dev'))
 app.use(cors());
+
 app.use("/api", apiRouter);
 app.use("/sub-topics", subtopicsRouter);
 app.use("/", topicsRouter);
