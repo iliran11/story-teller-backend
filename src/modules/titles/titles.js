@@ -27,7 +27,7 @@ router.get("/:topicId", async (req, res, next) => {
     const renderData = {
       title: "Fantasy Adventure Stories",
       subtitle: "Choose a topic you are curious about to begin a story",
-      cards
+      cards: [{}, {}, {}, {}],
     };
     res.render("views/titles", renderData);
   } catch (error) {

@@ -1,11 +1,24 @@
 <div class="card-2">
     <div class="card">
-      <h2 class="card-title text-lg text-primary"><%= card.title %></h2>
-      <div class="tags-container">
-        <% card.tags.forEach(tag => { %>
-          <span class="tag text-xs tag-contrast"><%= tag %></span>
-        <% }); %>
-      </div>
+      <% if (!card.title && (!card.tags || card.tags.length === 0)) { %>
+        <!-- Skeleton loading state -->
+        <div class="skeleton-title"></div>
+        <div class="skeleton-tags">
+          <div class="skeleton-tag"></div>
+          <div class="skeleton-tag"></div>
+          <div class="skeleton-tag"></div>
+        </div>
+      <% } else { %>
+        <!-- Regular card content -->
+        <h2 class="card-title text-lg text-primary"><%= card.title || '' %></h2>
+        <div class="tags-container">
+          <% if (card.tags && card.tags.length > 0) { %>
+            <% card.tags.forEach(tag => { %>
+              <span class="tag text-xs tag-contrast"><%= tag %></span>
+            <% }); %>
+          <% } %>
+        </div>
+      <% } %>
     </div>
   </div>
   
