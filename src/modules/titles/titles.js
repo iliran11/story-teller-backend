@@ -7,7 +7,29 @@ router.get("/:topicId", async (req, res, next) => {
   try {
     const topicId = req.params.topicId;
     const subtopics = await getSubTopics(topicId);
-    res.render("views/titles", { subtopics });
+
+    // Hardcoded card object for the card2 partial
+    const cards = [
+      {
+        title: "Fantasy Adventure Stories",
+        tags: ["Fantasy", "Adventure", "Magic", "Heroes", "Dragons"],
+      },
+      {
+        title: "Mystery Detective Tales",
+        tags: ["Mystery", "Detective", "Crime", "Suspense", "Clues"],
+      },
+      {
+        title: "Science Fiction Journeys",
+        tags: ["Sci-Fi", "Space", "Technology", "Future", "Aliens"],
+      }
+    ];
+
+    const renderData = {
+      title: "Fantasy Adventure Stories",
+      subtitle: "Choose a topic you are curious about to begin a story",
+      cards
+    };
+    res.render("views/titles", renderData);
   } catch (error) {
     next(error);
   }

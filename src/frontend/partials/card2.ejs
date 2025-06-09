@@ -1,12 +1,10 @@
 <div class="card-2">
     <div class="card">
-      <h2 class="card-title text-lg text-primary">Card Title Goes Here</h2>
+      <h2 class="card-title text-lg text-primary"><%= card.title %></h2>
       <div class="tags-container">
-        <span class="tag text-xs tag-contrast">Design</span>
-        <span class="tag text-xs tag-contrast">UI/UX</span>
-        <span class="tag text-xs tag-contrast">Mobile</span>
-        <span class="tag text-xs tag-contrast">Frontend</span>
-        <span class="tag text-xs tag-contrast">CSS</span>
+        <% card.tags.forEach(tag => { %>
+          <span class="tag text-xs tag-contrast"><%= tag %></span>
+        <% }); %>
       </div>
     </div>
   </div>
