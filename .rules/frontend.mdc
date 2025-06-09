@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+The tech stack of our frontend is ejs.
+Our frotned is composed of pages, for example: [index.ejs](mdc:src/frontend/views/index.ejs)
+partial, for example [card.ejs](mdc:src/frontend/partials/card.ejs), and [card-css.ejs](mdc:src/frontend/partials/card-css.ejs). each one sits in its folder. views or partials or CSS.
+
+We also have a helper classes for font sizes in [general.ejs](mdc:src/frontend/styles/general.ejs).
+[general.ejs](mdc:src/frontend/styles/general.ejs) also contains our color palette. every color should be used by the colors defined there.
+
+If we want to style a partial EJS, we need to create another ejs file, with the same name, just in styles folder, that contains a <style> tag.
+
+All design should refer to mobile only.

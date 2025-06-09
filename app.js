@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const morgan = require('morgan')
-const subtopicsRouter = require("./src/modules/sub-topics/sub-topics.route");
+const titlesRouter = require("./src/modules/titles/titles.js");
 const topicsRouter = require("./src/modules/topics/topics.route");
 const apiRouter = require("./src/modules/api/api.route");
 const cors = require("cors");
@@ -12,7 +12,7 @@ app.use(morgan('dev'))
 app.use(cors());
 
 app.use("/api", apiRouter);
-app.use("/sub-topics", subtopicsRouter);
+app.use("/titles", titlesRouter);
 app.use("/", topicsRouter);
 
 app.use((err, req, res, next) => {
