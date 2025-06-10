@@ -9,7 +9,7 @@ const backend = {
 
 const pages = {
   subTopics: (topicId) =>
-    new URL(`/sub-topics/${topicId}`, BASE_URL).toString(),
+    new URL(`/titles/${topicId}`, BASE_URL).toString(),
 };
 
 const UrlBuilder = { backend, pages };
