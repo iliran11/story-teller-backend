@@ -1,6 +1,6 @@
 // lib/openai.js
 const OpenAI = require("openai");
-const { supabase } = require("../../lib/supabase/supabase");
+const DB = require("./titles.db");
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -59,16 +59,9 @@ async function generateSubTopics(topic) {
   throw new Error("No tool calls found");
 }
 
-async function getSubTopics(topicId) {
-  const { data, error } = await supabase
-    .from("topic_descriptions")
-    .select("*")
-    .eq("topic_id", topicId)
-    .limit(1);
-  if (error) {
-    throw error;
-  }
-  return data;
+async function getTitlesByTopic(topicId) {
+  const titles = await DB.getTitlesByTopic(topicId);
+  return titles;
 }
 
-module.exports = { generateSubTopics, getSubTopics };
+module.exports = { generateSubTopics, getTitlesByTopic };
