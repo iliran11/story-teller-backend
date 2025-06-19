@@ -11,6 +11,9 @@
       <% } else { %>
         <!-- Regular card content -->
         <h2 class="card-title text-lg text-primary"><%= card.title || '' %></h2>
+        <% if (card.description) { %>
+          <p class="card-description text-sm"><%= card.description %></p>
+        <% } %>
         <div class="tags-container">
           <% if (card.tags && card.tags.length > 0) { %>
             <% card.tags.forEach(tag => { %>
